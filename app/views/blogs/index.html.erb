@@ -40,7 +40,7 @@
         <% @blogs.each do |blog| %>
         <div class="blog-item clearfix">
 <!--         <a href="/blogs/<%= blog.id %>"> -->
-          <% link_to blog_image,"/blogs/#{blogs.id}" do %>
+          <%= link_to "/blogs/#{blog.id}" do %>
           <%= image_tag"img/forest.jpg",class: "blog-image"%>
           <!-- <img class="blog-image" src="img/forest.jpg"> -->
           <% end %>
