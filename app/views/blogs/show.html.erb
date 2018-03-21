@@ -39,17 +39,16 @@
             <h3 class="blog-box-headline">
               <%= @blog.title %>
             </h3>
-            <%= attachment_image_tag @blog,:image,:fill,300,300,format:'jpeg' %>
-
             <div class="blog-box-content">
               <p class="category">
                 <%= @blog.category %>
               </p>
               <p class="blog-date">
-                <%= @blog.created_at %>
-                <%= @blog.updated_at %>
+                Posted <%= @blog.created_at %>
+                Last update <%= @blog.updated_at %>
               </p>
             </div>
+            <%= attachment_image_tag @blog,:image,:fill,300,300,format:'jpeg' %>
 
               <div class="single_image"></div>
               <p class="single_text">
@@ -62,7 +61,7 @@
           <div class="author_case clearfix">
             <div class="author_image"></div>
               <div class="author_box">
-                <p class="author_name">By JOHN SMITH / Photographer</p>
+                <%= @blog.author_name %>
                 <p class="author-text">His black and white landscapes, often captured at times<br>of the day and night when the light is fleeting, or in poor<br>weather conditions, such as rain, fog, or snow, are<br>reminiscent of the calm in a storm all with an ethereal<br>quality.
                 </p>
               </div>
