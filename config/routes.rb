@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 get '/blogs'=>'blogs#index'
 get '/blogs/new'=>'blogs#new'
 post '/blogs'=>'blogs#create'
-get '/blogs/:id'=>'blogs#show'
-
+get '/blogs/:id'=>'blogs#show',as: 'blog'
+get '/blogs/:id/edit'=>'blogs#edit',as:'edit_blog'
+patch '/blogs/:id'=>'blogs#update'
+delete '/blogs/:id'=>'blogs#destroy',as:'destroy_blog'
+resources :blogs
 end

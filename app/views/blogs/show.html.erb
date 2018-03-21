@@ -39,6 +39,7 @@
             <h3 class="blog-box-headline">
               <%= @blog.title %>
             </h3>
+            <%= attachment_image_tag @blog,:image,:fill,300,300,format:'jpeg' %>
 
             <div class="blog-box-content">
               <p class="category">
@@ -46,6 +47,7 @@
               </p>
               <p class="blog-date">
                 <%= @blog.created_at %>
+                <%= @blog.updated_at %>
               </p>
             </div>
 
@@ -54,8 +56,8 @@
                 <%= @blog.body %>
               </p>
 
-          <a href="#">編集</a>
-          <a href="#">削除</a>
+          <%= link_to "Edit",edit_blog_path %>
+          <%= link_to "Delete",destroy_blog_path,method: :delete,"data-confirm"=>"DELETE this blog ?" %>
 
           <div class="author_case clearfix">
             <div class="author_image"></div>

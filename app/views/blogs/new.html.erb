@@ -1,10 +1,80 @@
-<h2>新規投稿</h2>
-<%= form_for(@blog) do |f| %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
-  <h4>本文</h4>
-  <%= f.text_area :body %>
-  <h4>カテゴリー</h4>
-  <%= f.text_field :category %>
-  <%= f.submit '投稿' %>
-<% end %>
+<header>
+    <h1 class="headline">
+      <a href="/blogs">CARAVAN</a>
+    </h1>
+    <div class="social">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-instagram"></i>
+    </div>
+</header>
+
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="nav-list-item">About</li>
+      <li class="nav-list-item">Topic</li>
+    </ul>
+  </nav>
+
+<main class="clearfix">
+
+  <section class="blog">
+    <h2 class="blog-headline">Post New Blog</h2>
+    <%= form_for(@blog) do |f| %>
+      <div class="blog-item">
+        <h4>Title</h4>
+        <%= f.text_field :title %>
+        <h4>Body</h4>
+        <%= f.text_area :body %>
+        <h4>Category</h4>
+        <%= f.text_field :category %>
+        <h4>Picture</h4>
+        <%= f.attachment_field :image %>
+        <%= f.submit 'Post' %>
+      </div>
+    <% end %>
+  </section>
+
+  <div class="sidebar">
+      <section class="popular">
+        <h2 class="sidebar-headline">Popular</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">To solve old problems,<br>study new species</p>
+          <p class="popular-text">Why Earth may someday<br>look like Mars</p>
+          <p class="popular-text">What will humans look<br>like in 100 years?</p>
+          <p class="popular-text">How to grow a forest<br>in your backyard</p>
+          <p class="popular-text">How humans could evolve<br>to survive in space</p>
+        </div>
+      </section>
+      <section class="instagram">
+        <h2 class="instagram-headline">Instagram</h2>
+        <div class="sidebar-contents clearfix">
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+        </div>
+      </section>
+      <section class="categories">
+        <h2 class="categories-headline">Categories</h2>
+        <div class="sidebar-contents">
+          <p class="categories-text">Technology(15)</p>
+          <p class="categories-text">Business(23)</p>
+          <p class="categories-text">Entertainment(12)</p>
+          <p class="categories-text">Nature(32)</p>
+          <p class="categories-text">Education(9)</p>
+          <p class="categories-text">Adventure(23)</p>
+          <p class="categories-text">Communication(14)</p>
+        </div>
+      </section>
+  </div>
+</main>
+
+<footer>
+  <p class="footer-text">© All rights recerved by Infratop.Inc.</p>
+</footer>
