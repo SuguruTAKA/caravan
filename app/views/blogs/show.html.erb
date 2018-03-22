@@ -12,23 +12,28 @@
   <nav>
     <ul class="nav-list">
       <li class="nav-list-item">
-        <a href="#">Home</a>
+        <%= link_to "Work", blogs_path %>
       </li>
-      <li class="nav-list-item">About</li>
-      <li class="nav-list-item">Topic</li>
+      <li class="nav-list-item">
+        <%= link_to "Research", research_path %>
+      </li>
+      <li class="nav-list-item">
+        <%= link_to "Hobby", hobby_path %>
+      </li>
     </ul>
   </nav>
 
   <div class="main-visual">
-      <div class="main-visual-content">
-        <p class="main-visual-text">
-          The world is a book<br>
-          and those who do not travel<br>
-          read only one page.
-        </p>
-        <p class="main-visual-name">
-          St. Augustine
-        </p>
+    <p class="main-visual-copyright">© Christopher.Michel</p>
+    <div class="main-visual-content">
+      <p class="main-visual-text">
+        It's not a journey in which we can return.<br>
+        When we could not return,<br>
+        it will be a journey for the first time.
+      </p>
+      <p class="main-visual-name">
+        Hinata MIYAKE
+      </p>
       </div>
     </div>
 
@@ -39,6 +44,9 @@
             <h3 class="blog-box-headline">
               <%= @blog.title %>
             </h3>
+            <h5>
+              <%= @blog.headline %>
+            </h5>
             <div class="blog-box-content">
               <p class="category">
                 <%= @blog.category %>
@@ -48,7 +56,7 @@
                 Last update <%= @blog.updated_at %>
               </p>
             </div>
-            <%= attachment_image_tag @blog,:image %>
+            <%= attachment_image_tag @blog,:image,:fill,200,200 %>
 
               <div class="single_image"></div>
               <p class="single_text">

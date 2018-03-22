@@ -27,8 +27,14 @@ class BlogsController<ApplicationController
 		blog.destroy
 		redirect_to blogs_path
 	end
+
+	def research
+	end
+	def hobby
+	end
+
 	private
 	  def blog_params
-	  	params.require(:blog).permit(:title,:body,:category,:author_name,:image)
+	  	params.require(:blog).permit(:title,:headline,:body,:category,:author_name,:image)
 	  end
 end

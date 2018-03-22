@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 # delete '/blogs/:id'=>'blogs#destroy',as:'destroy_blog'
 root "blogs#index"
 resources :blogs
+get '/research'=>'blogs#research',as: 'research'
+get '/hobby'=>'blogs#hobby',as: 'hobby'
 end

@@ -12,10 +12,14 @@
   <nav>
     <ul class="nav-list">
       <li class="nav-list-item">
-        <a href="#">Home</a>
+        <%= link_to "Work", blogs_path %>
       </li>
-      <li class="nav-list-item">About</li>
-      <li class="nav-list-item">Topic</li>
+      <li class="nav-list-item">
+        <%= link_to "Research", research_path %>
+      </li>
+      <li class="nav-list-item">
+        <%= link_to "Hobby", hobby_path %>
+      </li>
     </ul>
   </nav>
 
@@ -27,6 +31,8 @@
       <div class="blog-item">
         <h4>Title</h4>
         <%= f.text_field :title %>
+        <h4>Headline</h4>
+        <%= f.text_field :headline %>
         <h4>Body</h4>
         <%= f.text_area :body %>
         <h4>Category</h4>

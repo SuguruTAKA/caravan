@@ -70,9 +70,16 @@ header .headline{
 .main-visual {
   width: 100%;
   height: 300px;
-  background-image: url(img/mv.jpg);
+  background-image: url(img/antarctic1.jpg);
   background-size: cover;
   background-position: center;
+}
+.main-visual-copyright{
+  float:right;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: rgba(255,255,255,0.5);
+  text-align: center;
 }
 .main-visual-content {
   width: 40%;
@@ -124,23 +131,8 @@ main {
   background-size: cover;
   height: 180px;
 }
-.blog-item:nth-child(1) .blog-image {
-  background-image: url(img/forest.jpg);
-}
-.blog-item:nth-child(2) .blog-image {
-  background-image: url(img/desert.jpg);
-}
-.blog-item:nth-child(3) .blog-image {
-  background-image: url(img/sunset.jpg);
-}
-.blog-item:nth-child(4) .blog-image {
-  background-image: url(img/italy.jpg);
-}
-.blog-item:nth-child(5) .blog-image {
-  background-image: url(img/asia.jpg);
-}
 .blog-text-headline {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 .blog-text {
   float: left;

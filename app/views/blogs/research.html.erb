@@ -9,74 +9,30 @@
     </div>
 </header>
 
-<nav>
+  <nav>
     <ul class="nav-list">
       <li class="nav-list-item">
-        <%= link_to "Work", blogs_path %>
+        <%= link_to "Work",blogs_path %>
       </li>
       <li class="nav-list-item">
-        <%= link_to "Research", research_path %>
+      <%= link_to "Research", research_path %>
       </li>
       <li class="nav-list-item">
-        <%= link_to "Hobby", hobby_path %>
+        <%= link_to "hobby", hobby_path %>
       </li>
     </ul>
-</nav>
-
-<div class="main-visual">
-    <p class="main-visual-copyright">© Christopher.Michel</p>
-    <div class="main-visual-content">
-      <p class="main-visual-text">
-        It's not a journey in which we can return.<br>
-        When we could not return,<br>
-        it will be a journey for the first time.
-      </p>
-      <p class="main-visual-name">
-        Hinata MIYAKE
-      </p>
-    </div>
-</div>
+  </nav>
 
 <main class="clearfix">
-    <section class="blog">
-      <h2 class="blog-headline">Blogs</h2>
-      <div class="blog-box">
-        <% @blogs.reverse_each do |blog| %>
-        <div class="blog-item clearfix">
-          <%= link_to "/blogs/#{blog.id}" do %>
-            <%= attachment_image_tag blog,:image,:fill,100,100,format:'jpeg' ,class: "blog-image"%>
-          <% end %>
-          <section class="blog-text">
-            <%= link_to "/blogs/#{blog.id}" do %>
-            <h3 class="blog-text-headline">
-              <%= blog.title %>
-            </h3>
-            <h5 class="blog-title-headline">
-              <%= blog.headline %>
-            </h5>
-            <% end %>
-            <p class="blog-date">
-              <%= blog.created_at %>
-            </p>
-            <span class="category">
-              <%= blog.category %>
-            </span>
-          </section>
-          </a>
-        </div>
-        <% end %>
-      </div>
-      <div class="pagination">
-        <p><</p>
-        <p>1</p>
-        <p>2</p>
-        <p>></p>
-      </div>
-    </section>
 
-    <div class="sidebar">
+  <section class="blog">
+    <h2 class="blog-headline">Research</h2>
+    
+  </section>
+
+  <div class="sidebar">
       <section class="popular">
-        <h2 class="sidebar-headline">Profile</h2>
+        <h2 class="sidebar-headline">Popular</h2>
         <div class="sidebar-contents">
           <p class="popular-text">To solve old problems,<br>study new species</p>
           <p class="popular-text">Why Earth may someday<br>look like Mars</p>
@@ -108,9 +64,9 @@
           <p class="categories-text">Communication(14)</p>
         </div>
       </section>
-    </div>
+  </div>
 </main>
 
 <footer>
-    <p class="footer-text">© All rights recerved by Infratop.Inc.</p>
+  <p class="footer-text">© All rights recerved by Infratop.Inc.</p>
 </footer>
