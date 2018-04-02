@@ -64,6 +64,10 @@ header .headline{
   display: inline-block;
   margin: 0 20px;
 }
+
+.log {
+  float: right;
+}
 /* header */
 
 /*main-visual*/

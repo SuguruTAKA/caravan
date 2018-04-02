@@ -57,14 +57,17 @@
               </p>
             </div>
             <%= attachment_image_tag @blog,:image,:fill,200,200 %>
-
-              <div class="single_image"></div>
-              <p class="single_text">
-                <%= @blog.body %>
-              </p>
-
-          <%= link_to "Edit",edit_blog_path %>
-          <%= link_to "Delete", blog_path,method: :delete,"data-confirm"=>"DELETE this blog ?" %>
+            <div class="single_image">
+              
+            </div>
+            <p class="single_text">
+              <%= @blog.body %>
+            </p>
+            
+            <% if user_signed_in? %>
+              <%= link_to "Edit",edit_blog_path %>
+              <%= link_to "Delete",blog_path,method: :delete,"data-confirm"=>"DELETE this blog ?" %>
+            <% end %>
 
           <div class="author_case clearfix">
             <div class="author_image"></div>

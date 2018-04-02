@@ -1,4 +1,6 @@
 class BlogsController<ApplicationController
+	# ユーザがログインしていないと"new"にアクセスできない
+  before_action :authenticate_user!,only: :new
 	def new
 		@blog = Blog.new
 	end

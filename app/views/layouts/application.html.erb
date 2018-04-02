@@ -6,9 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+
+  </head>
   <body>
+    <header>
+      <nav class="log">
+        <% if user_signed_in? %>
+          Hi! <strong><%= current_user.username %></strong> | 
+          <!-- <%= link_to 'プロフィール変更',edit_user_registration_path %> -->
+          <%= link_to 'Sign out',destroy_user_session_path,method: :delete %>
+        <% else %>
+          <!-- <%= link_to 'サインイン',new_user_registration_path %> -->
+          <%= link_to 'Sign in',new_user_session_path %>
+        <% end %>
+      </nav>
+    </header>
+
+    <p class='notice'><%= notice %></p>
+    <p class='alert'><%= alert %></p>
+    
     <%= yield %>
   </body>
 </html>
